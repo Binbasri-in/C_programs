@@ -1,9 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdi
+// prints i stars
+void printIStars(int i) {
+  // Count (call it j) from 1 to i (inclusive)
+  for (int j = 1; j <= i; j++) {
+    // Print a star
+    printf("*");
+  }
+}
 
-int main(int argc, char *argv[])
+// prints a triangle of n stars
+void printStarTriangle(int n) {
+  // Count (call it i) from 1 to n (inclusive)
+  for (int i = 1; i <= n; i++) {
+    // Print i stars
+    printIStars (i);
+    // Print a newline
+    printf("\n");
+  }
+}
+
+void main()
 {
-    char name[100];
-    gets(name);
-    printf("Hello, %s!\n", name);
+    // Print a triangle of n stars
+    printStarTriangle(5);
 }
