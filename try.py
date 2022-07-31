@@ -12,7 +12,7 @@ while (i < l):
         for cc in temp:
             litters[cc] = litters.get(cc, 0) + 1
 
-        for k in litters.value():
+        for k in litters.values():
             if k % 2 == 0:
                 count += 1
     print(count)
