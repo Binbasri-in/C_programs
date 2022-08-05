@@ -20,13 +20,9 @@ int main(void)
 
     // check if it is a palindrome
     if (reverse == n)
-    {
         printf("%d is a palindrome\n", n);
-    }
     else
-    {
         printf("%d is not a palindrome\n", n);
-    }
 
     return 0;
 }

@@ -10,7 +10,7 @@ int main()
     {
         x += 0.000001;
     }
-    printf("Square root of %d is %f\n", n, x);
+    printf("Square root of %d is %lf\n", n, x);
 
     return 0;
 }
