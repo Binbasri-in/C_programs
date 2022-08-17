@@ -1,3 +1,13 @@
+/*
+Aothur: Mohammed Ali Al sakkaf
+Date: 14/08/2022
+
+question: A7- develop a c program to find the revers of a positive number and check if it is a palindrom
+
+input: a positive number
+method: take number by number and revers
+output: the reversed number and is it a palindom or not
+*/
 #include <stdio.h>
 
 int main(void)
@@ -5,7 +15,11 @@ int main(void)
     // get the number from the user
     int n;
     printf("Enter the number: ");
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1 || n <= 0)
+    {
+    	printf("Invalid Input\n");
+    	return 1;
+    }
     // find the reverse of the number
     int reverse = 0;
     int temp = n;
