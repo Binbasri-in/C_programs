@@ -44,7 +44,7 @@ int main(void)
     }
     else if (units > 300)
     {
-        charges = 100 + 200*0.8 + 300*1.5 + (units-300)*1;
+        charges = 100 + 200*0.8 + 300*0.9 + (units-300)*1;
     }
     
     if (charges > 400)

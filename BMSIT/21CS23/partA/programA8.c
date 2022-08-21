@@ -4,18 +4,17 @@ Date: 14/08/2022
 
 question: A8- develop a c program to find the square root of the a given number
 
-input: a positive number
-method: take number by number and revers
-output: the reversed number and is it a palindom or not
+input: the number to be sqaure rooted
+method: start from 0.00001 and find the square root till the given number is found
+output: the square root of the number
 */
-
 #include <stdio.h>
 
 int main(void)
 {
     int n;
     printf("Enter a number: ");
-    if (scanf("%d", &n) != 1)
+    if (scanf("%d", &n) != 1 || n < 0)
     {
     	printf("Invalid input\n");
     	return 0;

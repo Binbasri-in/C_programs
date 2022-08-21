@@ -6,7 +6,7 @@ question: A6- develop a c program to display fibonacci sequence
 
 input: number of numbers to be displayed
 method: find fibonacci sequence till the givin order
-output: fibonacci seq till the n order
+output: fibonacci seq till the nth order
 */
 #include <stdio.h>
 
@@ -14,7 +14,7 @@ int main()
 {
     int n;
     double p=0, q=1, r;
-    printf("Enter a non-zero positive number: ");
+    printf("Enter a positive number: ");
     if (scanf("%d", &n) != 1 || n <= 0)
     {
         printf("invalid input\n");

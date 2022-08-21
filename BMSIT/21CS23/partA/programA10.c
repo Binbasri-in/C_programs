@@ -15,11 +15,19 @@ int main(void)
 	int n, key;
 	
 	printf("Enter the number of elements: ");
-	scanf("%d", &n);
+	if (scanf("%d", &n) != 1 || n <= 0)
+	{
+		printf("Invalid size of array\n");
+		return 1;
+	}
 	int a[n];
 	printf("Enter the elements one by one:\n");
 	for (int i = 0; i < n; i++)
-		scanf("%d", &a[i]);
+		if (scanf("%d", &a[i]) != 1)
+		{
+			printf("Invalid input\n");
+			return 2;
+		}
 		
 	printf("Enter the key to be found: ");
 	scanf("%d", &key);
