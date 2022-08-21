@@ -17,7 +17,7 @@ output: the total charge of the bill
 int main(void)
 {
     int units;
-    char name[20];
+    char name[30];
     float charges;
 
     printf("Enter your name: ");
@@ -44,7 +44,7 @@ int main(void)
     }
     else if (units > 300)
     {
-        charges = 100 + 200*0.8 + 300*0.9 + (units-300)*1;
+        charges = 100 + 200*0.8 + 300*0.9 + (units-300);
     }
     
     if (charges > 400)

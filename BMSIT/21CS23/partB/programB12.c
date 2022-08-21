@@ -11,36 +11,43 @@ output: The position of the key element in the array
 */
 #include <stdio.h>
 
-int binarySearch(int a[], int n, int key);
+void binarySearch(int a[], int n, int key);
 
 int main(void)
 {
     int n, key, pos;
 
     printf("Enter the number of elements in the array: ");
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1 || n < 1)
+    {
+        printf("Invalid input\n");
+        return 0;
+    }
     int a[n];
     printf("Enter the elements of the array\n ");
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &a[i]);
+        if (scanf("%d", &a[i]) != 1)
+        {
+            printf("Invalid input\n");
+            return 0;
+        }
     }
 
     printf("Enter the key element: ");
-    scanf("%d", &key);
-    pos = binarySearch(a, n, key);
+    if (scanf("%d", &key) != 1)
+    {
+        printf("Invalid input\n");
+        return 0;
+    }
 
-    if (pos == -1)
-    {
-        printf("The key element is not found in the array.\n");
-    }
-    else
-    {
-        printf("The key element is found in the array at position %d.\n", pos);
-    }
+    binarySearch(a, n, key);
+
+
+    return 0;
 }
 
-int binarySearch(int a[], int n, int key)
+void binarySearch(int a[], int n, int key)
 {
     int low = 0, high = n - 1, mid;
     while (low <= high)
@@ -48,7 +55,8 @@ int binarySearch(int a[], int n, int key)
         mid = (low + high) / 2;
         if (a[mid] == key)
         {
-            return mid+1;
+            printf("%d is in the array at position %d.\n", key, mid+1);
+            return
         }
         else if (a[mid] < key)
         {
@@ -59,5 +67,5 @@ int binarySearch(int a[], int n, int key)
             high = mid - 1;
         }
     }
-    return -1;
+    printf("%d is not found in the array.\n", key);
 }
