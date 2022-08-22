@@ -17,12 +17,20 @@ int main(void)
 {
     int n, i;
     printf("Enter the number of elements in the array: ");
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1)
+    {
+        printf("Invalid input\n");
+        return 1;
+    }
     int a[n];
-    printf("Enter the elements of the array\n ");
+    printf("Enter the elements of the array\n");
     for (i = 0; i < n; i++)
     {
-        scanf("%d", &a[i]);
+        if (scanf("%d", &a[i]) != 1)
+        {
+            printf("Invalid input\n");
+            return 1;
+        }
     }
     bubbleSort(a, n);
     printf("The sorted array is: \n");

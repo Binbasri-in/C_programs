@@ -21,7 +21,7 @@ int main(void)
     if (scanf("%d", &n) != 1 || n < 1)
     {
         printf("Invalid input\n");
-        return 0;
+        return 1;
     }
     int a[n];
     printf("Enter the elements of the array\n ");
@@ -30,7 +30,7 @@ int main(void)
         if (scanf("%d", &a[i]) != 1)
         {
             printf("Invalid input\n");
-            return 0;
+            return 1;
         }
     }
 
@@ -38,7 +38,7 @@ int main(void)
     if (scanf("%d", &key) != 1)
     {
         printf("Invalid input\n");
-        return 0;
+        return 1;
     }
 
     binarySearch(a, n, key);
