@@ -23,7 +23,7 @@ int main(void)
         return 1;
     }
     int a[n];
-    printf("Enter the elements of the array\n ");
+    printf("Enter the elements of the array\n");
     for (i = 0; i < n; i++)
     {
         if (scanf("%d", &n) != 1)
