@@ -24,7 +24,7 @@ int main(void)
         return 1;
     }
     int a[n];
-    printf("Enter the elements of the array\n ");
+    printf("Enter the elements of the array\n");
     for (int i = 0; i < n; i++)
     {
         if (scanf("%d", &a[i]) != 1)
@@ -56,7 +56,7 @@ void binarySearch(int a[], int n, int key)
         if (a[mid] == key)
         {
             printf("%d is in the array at position %d.\n", key, mid+1);
-            return
+            return ;
         }
         else if (a[mid] < key)
         {
@@ -69,3 +69,5 @@ void binarySearch(int a[], int n, int key)
     }
     printf("%d is not found in the array.\n", key);
 }
+
+S
