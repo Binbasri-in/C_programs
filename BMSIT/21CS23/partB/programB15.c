@@ -16,7 +16,7 @@ int matrixMultiplication(int a[][3], int b[][3], int c[][3]);
 int main(void)
 {
     int a[3][3], b[3][3], c[3][3];
-    printf("Enter the elements of the first matrix\n ");
+    printf("Enter the elements of the first matrix\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -24,7 +24,7 @@ int main(void)
             scanf("%d", &a[i][j]);
         }
     }
-    printf("Enter the elements of the second matrix\n ");
+    printf("Enter the elements of the second matrix\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
