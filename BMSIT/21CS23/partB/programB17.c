@@ -37,7 +37,7 @@ int main()
 {
     printf("Enter the name of the employee: ");
     scanf("%s", e.name);
-    printf("Enter the empid of the employee: ");
+    printf("Enter the empID of the employee: ");
     scanf("%d", &e.empid);
     printf("Enter the day of the employee's date of birth: ");
     scanf("%d", &e.dob.day);

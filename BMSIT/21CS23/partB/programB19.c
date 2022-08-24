@@ -10,6 +10,8 @@ method: pointers
 output: The sum, mean and standard deviation of the array
 */
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -18,9 +20,9 @@ int main()
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
     p = (float *)malloc(n * sizeof(float));
+    printf("Enter the element of the array: \n");
     for (i = 0; i < n; i++)
     {
-        printf("Enter the element of the array: ");
         scanf("%f", &p[i]);
         sum += p[i];
     }
