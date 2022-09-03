@@ -8,6 +8,7 @@ input: two numbers
 method: Eulric Algorithm
 output: The GCD and The LCM
 */
+//question: A4- develope a c program to find GCD and LCM of two numbers using Eulric algorithm
 #include <stdio.h>
 
 int main(void)

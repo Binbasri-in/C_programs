@@ -22,7 +22,7 @@ struct employee
         int day;
         int month;
         int year;
-    } dob;
+    } doj;
     struct salary
     {
         int basic;
@@ -39,12 +39,12 @@ int main()
     scanf("%s", e.name);
     printf("Enter the empID of the employee: ");
     scanf("%d", &e.empid);
-    printf("Enter the day of the employee's date of birth: ");
-    scanf("%d", &e.dob.day);
-    printf("Enter the month of the employee's date of birth: ");
-    scanf("%d", &e.dob.month);
-    printf("Enter the year of the employee's date of birth: ");
-    scanf("%d", &e.dob.year);
+    printf("Enter the day of the employee's date of joining: ");
+    scanf("%d", &e.doj.day);
+    printf("Enter the month of the employee's date of joining: ");
+    scanf("%d", &e.doj.month);
+    printf("Enter the year of the employee's date of joining: ");
+    scanf("%d", &e.doj.year);
     printf("Enter the basic salary of the employee: ");
     scanf("%d", &e.sal.basic);
     printf("Enter the DA of the employee: ");
@@ -54,6 +54,6 @@ int main()
     printf("The information of the employee is: \n");
     printf("Name: %s\n", e.name);
     printf("Empid: %d\n", e.empid);
-    printf("Date of birth: %d/%d/%d\n", e.dob.day, e.dob.month, e.dob.year);
+    printf("Date of joining: %d/%d/%d\n", e.doj.day, e.doj.month, e.doj.year);
     printf("Salary: %d\n", e.sal.basic + e.sal.da + e.sal.hra);
 }

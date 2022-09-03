@@ -40,7 +40,6 @@ int main(void)
     }
     printf("\n");
 }
-
 int selectionSort(int arr[], int n)
 {
     int i, j, temp, min;
@@ -49,10 +48,7 @@ int selectionSort(int arr[], int n)
         min = i;
         for (j = i + 1; j < n; j++)
         {
-            if (arr[j] < arr[min])
-            {
-                min = j;
-            }
+            if (arr[j] < arr[min]) min = j;
         }
         temp = arr[i];
         arr[i] = arr[min];

@@ -8,6 +8,7 @@ input: number of numbers to be displayed
 method: find fibonacci sequence till the givin order
 output: fibonacci seq till the nth order
 */
+//question: A6- develop a c program to display fibonacci sequence
 #include <stdio.h>
 
 int main()

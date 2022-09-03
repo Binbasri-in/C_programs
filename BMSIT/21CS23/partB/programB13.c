@@ -1,7 +1,6 @@
 /*
 Aothur: Mohammed Ali Al sakkaf
 Date: 17/08/2022
-
 question: B13- Design, develop and execute a C program with / without using functions to sort ‘n’ 
 elements of an array using bubble sort technique.
 
@@ -40,7 +39,6 @@ int main(void)
     }
     printf("\n");
 }
-
 
 int bubbleSort(int arr[], int n)
 {

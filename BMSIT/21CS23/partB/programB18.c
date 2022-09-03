@@ -10,39 +10,39 @@ input: The value of x
 method: Taylor series approximation
 output: The value of sin(x)
 */
+//question: B18- Design, develop and execute a C program to compute sin(x) using Taylor series 
+//approximation. Compare your result with the built-in library function. Print both 
+//the results with appropriate inferences. 
 #include <stdio.h>
-
-double sin(double x);
-double sin_builtin(double x);
-
-
-
-int main()
+#include <math.h>
+int fac(int n)
 {
-    double x;
-    printf("Enter the value of x: ");
-    scanf("%lf", &x);
-    printf("The value of sin(x) using Taylor series approximation is: %lf\n", sin(x));
-    printf("The value of sin(x) using built-in library function is: %lf\n", sin_builtin(x));
-}
-
-
-double sin(double x)
-{
-    double sum = 0, fact = 1, x_power = x;
-    for (int i = 1; i <= 10; i++)
+    int i,prod;
+    prod=1;
+    for (i=1;i<=n;i++)
     {
-        sum += (x_power / fact);
-        x_power *= -x * x;
-        fact *= (2 * i + 1) * (2 * i + 2);
+        prod*=i;
+    }
+    return prod;
+}
+float mysine(float x , int n)
+{
+    int i;
+    float sum=0;
+    for (i=0;i<=n;i++)
+    {
+        sum+=(pow(-1,i)*pow(x,2*i+1))/fac(2*i+1);
     }
     return sum;
 }
-
-double sin_builtin(double x)
+void main()
 {
-    return sin(x);
+
+    float x,n,rad,res;
+    printf("Enter angle and terms\n");
+    scanf("%f%f",&x,&n);
+    rad=x*3.14/180;
+    res=mysine(rad,n);
+    printf("result using my function = %f \n",res);
+    printf("result using built-in function = %f \n",sin(rad));
 }
-
-
-

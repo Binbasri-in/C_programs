@@ -9,7 +9,6 @@ method: compare the numbers using terniray operators
 output: the biggest amoung three numbers
 */
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -27,5 +26,5 @@ int main()
 	
 	printf("The biggest number is %d\n", max);
 	
-	return EXIT_SUCCESS;
+	return 0;
 }

@@ -13,7 +13,7 @@ output: The result of the comparison
 #include <stdio.h>
 
 int compare(char *str1, char *str2);
-int concatenate(char *str1, char *str2);
+void concatenate(char *str1, char *str2);
 int stringLength(char *str);
 
 int main(void)
@@ -24,7 +24,8 @@ int main(void)
     printf("Enter the second string: ");
     scanf("%s", str2);
     printf("The result of the comparison is: %d\n", compare(str1, str2));
-    printf("The result of the concatenation is: %d\n", concatenate(str1, str2));
+    concatenate(str1, str2);
+    printf("The result of the concatenation is: %s\n", str1);
     printf("The length of the string is: %d\n", stringLength(str1));
 }
 
@@ -49,7 +50,7 @@ int compare(char *str1, char *str2)
     }
 }
 
-int concatenate(char *str1, char *str2)
+void concatenate(char *str1, char *str2)
 {
     int i = 0, j = 0;
     while (str1[i] != '\0')
@@ -63,7 +64,6 @@ int concatenate(char *str1, char *str2)
         j++;
     }
     str1[i] = '\0';
-    return 1;
 }
 
 int stringLength(char *str)

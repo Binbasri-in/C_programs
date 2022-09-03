@@ -8,6 +8,7 @@ input: a number
 method: find a divisibale number from 3 to n-1
 output: a prime or not
 */
+//question: A5- develop a c program to check if a number is prime or not
 #include <stdio.h>
 
 int main()

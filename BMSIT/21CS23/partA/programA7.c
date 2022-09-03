@@ -8,6 +8,7 @@ input: a positive number
 method: take number by number and revers
 output: the reversed number and is it a palindom or not
 */
+//question: A7- develop a c program to find the revers of a positive number and check if it is a palindrom
 #include <stdio.h>
 
 int main(void)

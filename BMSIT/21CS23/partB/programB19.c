@@ -32,11 +32,11 @@ int main()
         sd += (p[i] - mean) * (p[i] - mean);
     }
     sd = sd / n;
-    sd = sd * sd;
     sd = sqrt(sd);
     printf("The sum of the array is: %f\n", sum);
     printf("The mean of the array is: %f\n", mean);
     printf("The standard deviation of the array is: %f\n", sd);
+    free(p);
     return 0;
 }
 

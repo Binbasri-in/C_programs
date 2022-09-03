@@ -11,17 +11,34 @@ output: The product of the two matrices
 */
 #include <stdio.h>
 
-int matrixMultiplication(int a[][3], int b[][3], int c[][3]);
+int matrixMultiplication(int a[][10], int b[][10], int c[][10]);
 
 int main(void)
 {
-    int a[3][3], b[3][3], c[3][3];
+    int a[10][10], b[10][10], c[10][10], m, n, p, q;
+    printf("Enter number of rows of Matrix A: ");
+    scanf("%d", &m);
+    printf("Enter number of columns of Matrix A: ");
+    scanf("%d", &n);
+    printf("Enter number of rows of Matrix B: ");
+    scanf("%d", &p);
+    printf("Enter number of columns of Matrix A: ");
+    scanf("%d", &q);
     printf("Enter the elements of the first matrix\n");
+    if (n != p)
+    {
+        printf("Multiplication is not possible\n");
+        return 1;
+    }
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            scanf("%d", &a[i][j]);
+            if (scanf("%d", &a[i][j]) != 1)
+            {
+                printf("Invalid Input\n");
+                return 2;
+            }
         }
     }
     printf("Enter the elements of the second matrix\n");
@@ -29,7 +46,11 @@ int main(void)
     {
         for (int j = 0; j < 3; j++)
         {
-            scanf("%d", &b[i][j]);
+            if (scanf("%d", &b[i][j]) != 1)
+            {
+                printf("Invalid Input\n");
+                return 2;
+            }
         }
     }
     matrixMultiplication(a, b, c);
@@ -44,7 +65,7 @@ int main(void)
     }
 }
 
-int matrixMultiplication(int a[][3], int b[][3], int c[][3])
+int matrixMultiplication(int a[][10], int b[][10], int c[][10])
 {
     for (int i = 0; i < 3; i++)
     {

@@ -8,9 +8,8 @@ input: 2 operands and one operator in the form ( 13 + 123 )
 method: using switch statement to choose the operation
 output: the result after making the operation
 */
-
+//question: A2- develop a program to simulate the operations of simple calculator
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -36,7 +35,7 @@ int main()
 			res = n1 /  n2; break;
 		case '%': res = (int)n1 % (int)n2; break;
 	}
-	printf("%f\t%c\t%f\t=\t%f\n", n1, op, n2, res);
+	printf("%.2f\t%c\t%.2f\t=\t%.2f\n", n1, op, n2, res);
 	
-	return EXIT_SUCCESS;
+	return 0;
 }

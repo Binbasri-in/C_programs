@@ -69,5 +69,3 @@ void binarySearch(int a[], int n, int key)
     }
     printf("%d is not found in the array.\n", key);
 }
-
-S
