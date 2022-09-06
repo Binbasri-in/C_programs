@@ -25,7 +25,7 @@ int main(void)
     {
         x += 0.00001;
     }
-    printf("Square root of %d is %.2lf\n", n, x);
+    printf("Square root of %d is %.3lf\n", n, x);
 
     return 0;
 }

@@ -8,7 +8,6 @@ input: 2 operands and one operator in the form ( 13 + 123 )
 method: using switch statement to choose the operation
 output: the result after making the operation
 */
-//question: A2- develop a program to simulate the operations of simple calculator
 #include <stdio.h>
 
 int main()

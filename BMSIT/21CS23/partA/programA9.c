@@ -8,7 +8,6 @@ input: a positive number
 method: store the coefficients and sum together to get the value of the polynomial
 output: the sum of all parts
 */
-//question: A9- develop a c program to evaluate a polynomial of n degree
 #include <stdio.h>
 #include <math.h>
 
@@ -23,6 +22,14 @@ int main(void)
 		return 1;
 	}
 	int a[n+1];
+
+	printf("Enter the value of x: ");
+	if (scanf("%d", &x) != 1)
+	{
+		printf("Invalid input\n");
+		return 3;
+	}
+	sum = 0;
 	printf("Enter the coefficients in ascending order\n");
 	for (int i = 0 ; i <= n; i++)
 	{
@@ -31,19 +38,9 @@ int main(void)
 			printf("Invalid input\n");
 			return 2;
 		}
-	}
-	printf("Enter the value of x: ");
-	if (scanf("%d", &x) != 1)
-	{
-		printf("Invalid input\n");
-		return 3;
-	}
-	
-	sum = 0;
-	for (int i = 0; i <= n; i++)
-	{
 		sum += a[i] * pow(x, i);
 	}
+
 	printf("The sum of the polynomial is %d\n", sum);
 
 	return 0;

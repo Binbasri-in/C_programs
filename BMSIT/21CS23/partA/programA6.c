@@ -2,13 +2,12 @@
 Aothur: Mohammed Ali Al sakkaf
 Date: 14/08/2022
 
-question: A6- develop a c program to display fibonacci sequence
+question: A6- develop a c program to display fibonacci series upto n terms.
 
 input: number of numbers to be displayed
-method: find fibonacci sequence till the givin order
+method: find fibonacci series till the givin order
 output: fibonacci seq till the nth order
 */
-//question: A6- develop a c program to display fibonacci sequence
 #include <stdio.h>
 
 int main()
