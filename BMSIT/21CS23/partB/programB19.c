@@ -19,17 +19,18 @@ int main()
     float sum = 0, mean = 0, sd = 0, *p;
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
-    p = (float *)malloc(n * sizeof(float));
+    int arr[n];
+    p = arr;
     printf("Enter the element of the array: \n");
     for (i = 0; i < n; i++)
     {
-        scanf("%f", &p[i]);
-        sum += p[i];
+        scanf("%f", p + i);
+        sum += *(p + i);
     }
     mean = sum / n;
     for (i = 0; i < n; i++)
     {
-        sd += (p[i] - mean) * (p[i] - mean);
+        sd += (*(p + i) - mean) * (*(p + i) - mean);
     }
     sd = sd / n;
     sd = sqrt(sd);
@@ -39,4 +40,3 @@ int main()
     free(p);
     return 0;
 }
-
