@@ -55,14 +55,20 @@ void sort(int low, int high)
 int main(void)
 {
     int n;
-    printf("\nEnter number of elements");
-    scanf("%d", &n);
-    printf("\nEnter %d elemnts", n);
+    printf("\nEnter number of elements: ");
+    if (scanf("%d", &n) != 1){
+        printf("Invalid input");
+        return 1;
+    }
+    printf("\nEnter %d elemnts: ", n);
     for(int i=0; i<n; i++)
     {
-        scanf("%d", &array1[i]);
+        if (scanf("%d", &array1[i]) != 1){
+            printf("Invalid input");
+            return 2;
+        }
     }
-    printf("\nArray after sorting is : ");
+    printf("\nArray after sorting is: ");
 
     sort(0, n-1);
 
