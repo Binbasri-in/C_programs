@@ -1,0 +1,83 @@
+// 1.1 a program to print the elements of an array along with their address using pointers
+// Path: 21CS32_programs\1_arrays1.c
+
+// 1.2 a program to find the sum of all elements of an array using pointers
+// Path: 21CS32_programs\1_arrays2.c
+
+// 1.3 a program to read and print an array of m * n matrix using pointers
+// Path: 21CS32_programs\1_arrays3.c
+
+// 1.4 a program to perform linear search on an array using pointers
+// Path: 21CS32_programs\1_arrays4.c
+
+// 1.5 a program to perform binary search on an array using pointers
+// Path: 21CS32_programs\1_arrays5.c
+
+// 1.6 a program to perform bubble sort on an array using pointers
+// Path: 21CS32_programs\1_arrays6.c
+
+// 1.7 a program to merge two sorted array elements into a single sorted array
+// Path: 21CS32_programs\1_arrays7.c
+
+// 2.1 Implementation of stacks using arrays
+// Path: 21CS32_programs\2_stacks1.c
+
+// 2.2 Implementation of stacks using dynamic arrays (by doubling the size of the array when the array is full)
+// Path: 21CS32_programs\2_stacks2.c
+
+// 2.3 converting infix to postfix for single digit operands
+// path: 21CS32_programs\2_stack3.c
+
+// 2.4 a program to evaluate postfix expression
+// path: 21CS32_programs\2_stack4.c
+
+// 2.5 a program to divide an array into multiple stacks
+// path: 21CS32_programs\2_stack5.c
+
+// 2.6 program to implement 2 stacks in a single array
+// Path: 21CS32_programs\2_stack6.c
+
+// 2.7 program to reverse a given string using stacks
+// Path: 21CS32_programs\2_stack7.c
+
+// 2.8 program to check whether a given string is a palindrome or not using stacks
+// Path: 21CS32_programs\2_stack8.c
+
+// program to check whether a given number is a palindrome or not using stacks
+// Path: 21CS32_programs\2_stack9.c
+
+// 3.1 Implementing a queue using an array (ordinary queue)
+// path: 21CS32_programs\3_queue1.c
+
+// 3.2 Implementing a queue using arrays (circular queue)
+// Path: 21CS32_programs\3_queue2.c
+
+// 3.3 Implementing a circular queue using dynamic arrays (double capacity queue)
+// Path: 21CS32_programs\3_queue3.c
+
+// 3.4 implementation of double ended queue
+// Path: 21CS32_programs\3_queue4.c
+
+// 3.5 Implementing priority queues using arrays
+// Path: 21CS32_programs\3_queue5.c
+
+// 3.6 Recursive program to find the factorial of a number
+// Path: 21CS32_programs\3_recursion6.c
+
+// 3.7 Recursive program for Fibonacci number
+// Path: 21CS32_programs\3_recursion7.c
+
+// 3.8 Recursive program for Fibonacci number (generate n Fibonacci numbers)
+// Path: 21CS32_programs\3_recursion8.c
+
+// 3.9 Recursive program to find the GCD of two numbers
+// Path: 21CS32_programs\3_recursion9.c
+
+// 3.10 Recursive program to find Binomial Coefficient (nCr)
+// Path: 21CS32_programs\3_recursion10.c
+
+// 3.11 Recursive program to solve The Towers of Hanoi problem
+// Path: 21CS32_programs\3_recursion11.c
+
+// 3.12 Recursive program for Ackerman's function
+// Path: 21CS32_programs\3_recursion12.c
