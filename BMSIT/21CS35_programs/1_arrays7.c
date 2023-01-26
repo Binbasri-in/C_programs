@@ -2,7 +2,7 @@
 // Path: 21CS32_programs\1_arrays7.c
 #include<stdio.h>
 
-void main()
+int main()
 {
     // initialize the index variables
     int n1, n2, i, j, k;
@@ -95,4 +95,5 @@ void main()
         printf("%d ", arr3[i]);
     }
     printf("\n");
+    return 0;
 }

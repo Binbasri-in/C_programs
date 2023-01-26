@@ -8,7 +8,7 @@ int count = 0;
 void tower(int n, char source, char destination, char auxiliary);
 
 // main function
-void main()
+int main()
 {
     // read the number of disks
     int n;

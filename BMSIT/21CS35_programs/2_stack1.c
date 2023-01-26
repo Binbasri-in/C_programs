@@ -22,7 +22,7 @@ int main()
     for(;;)
     {
         // display the menu
-        printf("1. Push\t2. Pop\t3. Display\t4. isEmpty\t5. isFull\t6. Exit\tEnter your choice: ");
+        printf("1. Push\t2. Pop\t3. Display\t4. isEmpty\t5. isFull\t6. Exit\nEnter your choice: ");
         // get the choice
         scanf("%d",&choice);
         // check the choice
@@ -49,7 +49,7 @@ int main()
                 if(item!=-1)
                 {
                     // print the item
-                    printf("Item popped: %d",item);
+                    printf("Item popped: %d\n",item);
                 }
                 break;
             }
@@ -84,7 +84,7 @@ int main()
             default:
             {
                 // print the message
-                printf("Invalid choice");
+                printf("Invalid choice\n");
             }
         }
     }
@@ -97,7 +97,7 @@ void push(int item, int *top, int stack[])
     if(*top==4)
     {
         // print the message
-        printf("Stack overflow");
+        printf("Stack overflow\n");
     }
     // check if the stack is not full
     else
@@ -116,7 +116,7 @@ int pop(int *top, int stack[])
     if(*top==-1)
     {
         // print the message
-        printf("Stack underflow");
+        printf("Stack underflow\n");
         // return -1
         return -1;
     }
@@ -141,7 +141,7 @@ void display(int *top, int stack[])
     if(*top==-1)
     {
         // print the message
-        printf("Stack is empty");
+        printf("Stack is empty\n");
     }
     // check if the stack is not empty
     else
@@ -154,6 +154,8 @@ void display(int *top, int stack[])
             // print the item
             printf("%d\t",stack[i]);
         }
+        // print a new line
+        printf("\n");
     }
 }
 
@@ -164,13 +166,13 @@ void isEmpty(int *top)
     if(*top==-1)
     {
         // print the message
-        printf("Stack is empty");
+        printf("Stack is empty\n");
     }
     // check if the stack is not empty
     else
     {
         // print the message
-        printf("Stack is not empty");
+        printf("Stack is not empty\n");
     }
 }
 
@@ -181,13 +183,13 @@ void isFull(int *top)
     if(*top==4)
     {
         // print the message
-        printf("Stack is full");
+        printf("Stack is full\n");
     }
     // check if the stack is not full
     else
     {
         // print the message
-        printf("Stack is not full");
+        printf("Stack is not full\n");
     }
 }
         

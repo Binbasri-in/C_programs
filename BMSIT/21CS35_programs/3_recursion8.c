@@ -6,7 +6,7 @@
 int fibonacci(int n);
 
 // main function
-void main()
+int main()
 {
     // read the number
     int n, fib;

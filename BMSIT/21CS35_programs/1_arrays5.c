@@ -5,7 +5,7 @@
 int main()
 {
     // initialize the array
-    int arr[5]={1,2,3,4,5};
+    int arr[]={2,3,4,5};
     // initialize the pointer to the array
     int *ptr=arr;
     // initialize the variable to store the item to be searched
@@ -24,7 +24,7 @@ int main()
         if(*(ptr+mid)==item)
         {
             // print the position
-            printf("Position: %d",mid);
+            printf("Position: %d",mid+1);
             return 0;
         }
         // check if the element is greater than the item

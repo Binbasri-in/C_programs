@@ -81,3 +81,9 @@
 
 // 3.12 Recursive program for Ackerman's function
 // Path: 21CS32_programs\3_recursion12.c
+
+// 4.1 Implementing Singly Linked List
+// Path: 21CS32_programs\4_linkedList1.c
+
+// 4.2 More operational functions for linked lists (write your own main function)
+// path: 21CS35_programs\4_linkedList2.c

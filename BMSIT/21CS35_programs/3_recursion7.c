@@ -6,7 +6,7 @@
 int fibonacci(int n);
 
 // main function
-void main()
+int main()
 {
     // read the number
     int n, fib;
@@ -22,10 +22,10 @@ void main()
 int fibonacci(int n)
 {
     // termination condition when it reaches 0
-    if (n == 0)
+    if (n == 1)
         return 0;
     // termination condition when it reaches 1
-    if (n == 1)
+    if (n == 2)
         return 1;
     // recursive call
     return fibonacci(n - 1) + fibonacci(n - 2);

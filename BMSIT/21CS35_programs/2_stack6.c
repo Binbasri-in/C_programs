@@ -55,8 +55,8 @@ void push1(int item, int *top1, int *top2, int s[])
         printf("Stack overflow\n");
         return;
     }
-    *top = *top + 1;
-    s[*top] = item;
+    *top1 = *top1 + 1;
+    s[*top1] = item;
 }
 
 // push to stack 2

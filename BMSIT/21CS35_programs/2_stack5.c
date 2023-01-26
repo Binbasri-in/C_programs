@@ -18,7 +18,7 @@ void push(int item, int stackno);
 void pop(int stackno);
 void display(int stackno);
 
-void main()
+int main()
 {
     // 
     int i,choice, item, stackno;

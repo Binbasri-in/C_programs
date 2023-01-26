@@ -10,7 +10,7 @@ void push(int item, int *top, int *stack);
 void pop(int *top, int *stack);
 void display(int top, int *stack);
 
-void main()
+int main()
 {
     int *stack = (int *)malloc(capasity * sizeof(int)); // dynamically allocated array
     int top = -1; // initially the stack is empty

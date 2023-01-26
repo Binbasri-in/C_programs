@@ -6,12 +6,12 @@
 #define queue_size 5
 
 // prototypes
-void insert_order(int item, int *rear, int *rear, int q[]);
+void insert_order(int item, int *front, int *rear, int q[]);
 void delete_front(int *front, int *rear, int q[]);
 void display(int front, int rear, int q[]);
 
 // main function
-void main()
+int main()
 {
     // the queue initialization
     int queue[queue_size];

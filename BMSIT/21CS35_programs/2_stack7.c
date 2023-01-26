@@ -11,27 +11,29 @@ void push(char item, int *top, char s[]);
 char pop(int *top, char s[]);
 void reverse_string(char s[], char rev[]);
 
-void main()
+int main()
 {
     char s[stacksize], rev[stacksize];
     printf("Enter the string: ");
     scanf("%s", s);
     reverse_string(s, rev);
     printf("The reversed string is: %s\n", rev);
+    return 0;
 }
 
 // reverse the string
 void reverse_string(char s[], char rev[])
 {
     int i, n, top = -1;
+    char str[stacksize];
     n = strlen(s);
     for (i = 0; i < n; i++)
     {
-        push(s[i], &top, rev);
+        push(s[i], &top, str);
     }
     for (i = 0; i < n; i++)
     {
-        rev[i] = pop(&top, rev);
+        rev[i] = pop(&top, str);
     }
     rev[i] = '\0';
 }

@@ -11,7 +11,7 @@ void push(int item, int *top, int stack[]);
 int pop(int *top, int stack[]);
 int evaluate_postfix(char postfix[]);
 
-void main()
+int main()
 {
     // initialize the the expressions
     char postfix[stacksize];

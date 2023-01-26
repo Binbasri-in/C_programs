@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #define queue_size 5
+int queue[queue_size];
 
 // prototypes
 void insert_rear(int item, int *rear, int *count);
@@ -13,10 +14,10 @@ void delete_rear(int *front, int *rear, int *count);
 void display(int front, int rear, int *q, int count);
 
 // main function
-void main()
+int main()
 {
     // the queue initialization
-    int queue[queue_size];
+    
     int front = 0, rear = -1, item, choice, count = 0;
     // the menu
     for (;;)

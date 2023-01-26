@@ -5,7 +5,7 @@
 int main()
 {
     // initialize the array
-    int arr[5]={1,2,3,4,5};
+    int arr[]={2,3,4,5};
     // initialize the pointer to the array
     int *ptr=arr;
     // initialize the variable to store the item to be searched
@@ -14,13 +14,13 @@ int main()
     printf("Enter the item to be searched: ");
     scanf("%d",&item);
     // iterate through the array
-    for(int i=0;i<5;i++)
+    for(int i=0;i<4;i++)
     {
         // check if the element is equal to the item
         if(*ptr==item)
         {
             // print the position
-            printf("Position: %d",i);
+            printf("Position: %d",i+1);
             return 0;
         }
         // increment the pointer

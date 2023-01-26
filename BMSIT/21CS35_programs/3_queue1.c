@@ -10,7 +10,7 @@ void insert_rear(int item, int *rear, int q[]);
 void delete_front(int *front, int *rear, int q[]);
 void display(int front, int rear, int q[]);
 
-void main()
+int main()
 {
     // the queue initialization
     int q[queue_size], front = 0, rear = -1, item, choice;

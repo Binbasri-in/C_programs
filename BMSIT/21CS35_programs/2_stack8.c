@@ -11,7 +11,7 @@ void push(char item, int *top, char s[]);
 char pop(int *top, char s[]);
 int check_palindrome(char s[]);
 
-void main()
+int main()
 {
     // read input from user
     char s[stacksize];

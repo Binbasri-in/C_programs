@@ -15,7 +15,7 @@ void infix_to_postfix(char infix[], char postfix[]);
 void push(char ch, int *top, char stack[]);
 char pop(int *top, char stack[]);
 
-void main()
+int main()
 {
     // initialize the the expressions
     char infix[stacksize], postfix[stacksize];
@@ -72,7 +72,7 @@ void infix_to_postfix(char infix[], char postfix[])
 {
     // declare the variables and initialize them
     int i, n, j, top;
-    char ch, stack[stacksize];
+    char ch,symbol, stack[stacksize];
     j = 0;
     top = -1;
     n = strlen(infix);

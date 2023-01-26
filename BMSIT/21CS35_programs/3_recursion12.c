@@ -6,7 +6,7 @@
 int ackerman(int m, int n);
 
 // main function
-void main()
+int main()
 {
     // read the numbers
     int m, n, result;

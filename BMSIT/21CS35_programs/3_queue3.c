@@ -12,7 +12,7 @@ void delete_front(int *front, int *rear, int *count);
 void display(int front, int rear, int *q, int count);
 
 // main function
-void main()
+int main()
 {
     // the queue initialization
     queue = (int *)malloc(capacity * sizeof(int));

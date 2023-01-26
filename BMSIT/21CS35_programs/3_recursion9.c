@@ -6,7 +6,7 @@
 int gcd(int a, int b);
 
 // main function
-void main()
+int main()
 {
     // read the numbers
     int a, b, result;
@@ -26,7 +26,7 @@ int gcd(int a, int b)
         return a;
     // recursive call
     if (a > b)
-        return gcd(a-n, n);
+        return gcd(a-b, b);
     else
         return gcd(a, b-a);
 }

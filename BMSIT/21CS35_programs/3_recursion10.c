@@ -6,7 +6,7 @@
 int binomial(int n, int r);
 
 // main function
-void main()
+int main()
 {
     // read the numbers
     int n, r, result;

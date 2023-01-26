@@ -1,4 +1,4 @@
-// 1.1 a program to print the elements of an array along with their address using pointers
+ // 1.1 a program to print the elements of an array along with their address using pointers
 // Path: 21CS32_programs\1_arrays1.c
 #include<stdio.h>
 
