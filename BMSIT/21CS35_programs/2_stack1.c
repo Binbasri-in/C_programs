@@ -192,4 +192,24 @@ void isFull(int *top)
         printf("Stack is not full\n");
     }
 }
+
+// Output:
+// 1. Push  2. Pop   3. Display       4. isEmpty       5. isFull        6. Exit
+// Enter your choice: 1
+// Enter the item to be pushed: 10
+// 1. Push  2. Pop   3. Display       4. isEmpty       5. isFull        6. Exit
+// Enter your choice: 1
+// Enter the item to be pushed: 20
+// 1. Push  2. Pop   3. Display       4. isEmpty       5. isFull        6. Exit
+// Enter your choice: 1
+// Enter the item to be pushed: 30
+// 1. Push  2. Pop   3. Display       4. isEmpty       5. isFull        6. Exit
+// Enter your choice: 3
+// 30      20      10
+// 1. Push  2. Pop   3. Display       4. isEmpty       5. isFull        6. Exit
+// Enter your choice: 2
+// Item popped: 30
+// 1. Push  2. Pop   3. Display       4. isEmpty       5. isFull        6. Exit
+// Enter your choice: 3
+// 20      10
         

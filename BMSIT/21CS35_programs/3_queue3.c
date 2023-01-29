@@ -87,3 +87,20 @@ void display(int front, int rear, int *q, int count)
         printf("\n");
     }
 }
+
+// Output:
+// 1. Insert rear 2. Delete front 3. Display 4. Exit
+// Enter your choice: 1
+// Enter the item to be inserted: 10
+// 1. Insert rear 2. Delete front 3. Display 4. Exit
+// Enter your choice: 1
+// Enter the item to be inserted: 20
+// 1. Insert rear 2. Delete front 3. Display 4. Exit
+// Enter your choice: 3
+// The contents of the queue are: 10 20
+// 1. Insert rear 2. Delete front 3. Display 4. Exit
+// Enter your choice: 2
+// The deleted item is 10
+// 1. Insert rear 2. Delete front 3. Display 4. Exit
+// Enter your choice: 3
+// The contents of the queue are: 20

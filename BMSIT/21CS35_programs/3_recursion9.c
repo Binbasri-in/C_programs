@@ -30,3 +30,7 @@ int gcd(int a, int b)
     else
         return gcd(a, b-a);
 }
+
+// Output:
+// Enter two numbers: 12 18
+// GCD of 12 and 18 is 6

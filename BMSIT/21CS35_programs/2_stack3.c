@@ -131,3 +131,6 @@ char pop(int *top, char stack[])
     return ch;
 }
 
+// Output:
+// Enter the infix expression: 2+3*4
+// The postfix expression is: 234*+

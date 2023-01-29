@@ -86,3 +86,7 @@ int pop(int *top, int stack[])
     *top = *top - 1;
     return item;
 }
+
+// Output:
+// Enter the postfix expression: 23*54*+9-
+// The result is: 37

@@ -30,3 +30,7 @@ int main()
     printf("Item not found");
     return 0;
 }
+
+// Output:
+// Enter the item to be searched: 4
+// Position: 3

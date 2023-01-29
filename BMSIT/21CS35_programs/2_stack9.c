@@ -79,3 +79,9 @@ int pop(int *top, int s[])
     *top = *top - 1;
     return item;
 }
+
+// Output:
+// Enter the number: 12321
+// The number is a palindrome
+// Enter the number: 12345
+// The number is not a palindrome

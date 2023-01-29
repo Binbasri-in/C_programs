@@ -36,3 +36,14 @@ void tower(int n, char source, char destination, char auxiliary)
     count++;
     tower(n - 1, auxiliary, destination, source);
 }
+
+// Output:
+// Enter the number of disks: 3
+// Move disk 1 from S to D
+// Move disk 2 from S to T
+// Move disk 1 from D to T
+// Move disk 3 from S to D
+// Move disk 1 from T to S
+// Move disk 2 from T to D
+// Move disk 1 from S to D
+// Total number of moves: 7

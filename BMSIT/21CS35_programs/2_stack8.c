@@ -79,3 +79,7 @@ char pop(int *top, char s[])
     *top = *top - 1;
     return item;
 }
+
+// Output:
+// Enter the string: madam
+// The string is a palindrome

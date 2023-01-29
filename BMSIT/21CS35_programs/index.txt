@@ -87,3 +87,15 @@
 
 // 4.2 More operational functions for linked lists (write your own main function)
 // path: 21CS35_programs\4_linkedList2.c
+
+// 4.3 demonstration of count function of linked list
+// Path: 21CS35_programs\4_linkedList3.c
+
+// 4.4 demonstration of concatenation of two linked lists
+// Path: 21CS35_programs\4_linkedList4.c
+
+// 4.5 demonstration of reverse function of linked list
+// Path: 21CS35_programs\4_linkedList5.c
+
+// 4.6 demonstration of delete where data is given or its position is given
+// Path: 21CS35_programs\4_linkedList6.c

@@ -122,3 +122,26 @@ void display(int front, int rear, int *q, int count)
     }
     printf("\n");
 }
+
+// Output:
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 1
+//Enter the item to be inserted: 10
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 1
+//Enter the item to be inserted: 20
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 2
+//Enter the item to be inserted: 30
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 5
+//The queue is: 30 10 20
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 3
+//The deleted item is 30
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 4
+//The deleted item is 20
+//1. Insert rear 2. Insert front 3. Delete front  4. Delete rear 5. Display  6. Exit
+//Enter your choice: 5
+//The queue is: 10

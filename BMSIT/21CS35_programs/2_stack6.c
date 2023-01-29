@@ -128,3 +128,20 @@ void display2(int top2, int s[])
     }
     printf("\n");
 }
+
+// Output:
+// 1.push to stack 1. 2.pop from stack 1. 3.display stack 1
+// 4.push to stack 2. 5.pop from stack 2. 6.display stack 2
+// 7.exit
+// Enter your choice: 1
+// Enter the item to be pushed: 10
+// 1.push to stack 1. 2.pop from stack 1. 3.display stack 1
+// 4.push to stack 2. 5.pop from stack 2. 6.display stack 2
+// 7.exit
+// Enter your choice: 1
+// Enter the item to be pushed: 20
+// 1.push to stack 1. 2.pop from stack 1. 3.display stack 1
+// 4.push to stack 2. 5.pop from stack 2. 6.display stack 2
+// 7.exit
+// Enter your choice: 3
+// The stack is: 10 20

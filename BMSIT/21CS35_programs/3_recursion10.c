@@ -27,3 +27,7 @@ int binomial(int n, int r)
     // recursive call
     return binomial(n - 1, r - 1) + binomial(n - 1, r);
 }
+
+// Output:
+// Enter two numbers: 5 2
+// Binomial coefficient of 5 and 2 is 10

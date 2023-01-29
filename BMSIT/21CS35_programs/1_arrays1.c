@@ -18,3 +18,10 @@ int main()
     }
     return 0;
 }
+
+// Output:
+// Element: 1   Address: 0x7ffce7b7b9c0
+// Element: 2   Address: 0x7ffce7b7b9c4
+// Element: 3   Address: 0x7ffce7b7b9c8
+// Element: 4   Address: 0x7ffce7b7b9cc
+// Element: 5   Address: 0x7ffce7b7b9d0

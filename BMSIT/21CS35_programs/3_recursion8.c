@@ -34,3 +34,7 @@ int fibonacci(int n)
     // recursive call
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
+
+// Output:
+// Enter a number: 5
+// 0 1 1 2 3

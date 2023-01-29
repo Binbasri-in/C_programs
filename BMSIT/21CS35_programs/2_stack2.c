@@ -88,3 +88,23 @@ void display(int top, int *stack)
     }
     printf("\n");
 }
+
+// Output:
+// 1. Push  2. Pop  3. Display  4. Exit
+// Enter your choice: 1
+// Enter the item to be pushed: 10
+// 1. Push  2. Pop  3. Display  4. Exit
+// Enter your choice: 1
+// Enter the item to be pushed: 20
+// 1. Push  2. Pop  3. Display  4. Exit
+// Enter your choice: 1
+// Enter the item to be pushed: 30
+// 1. Push  2. Pop  3. Display  4. Exit
+// Enter your choice: 3
+// The stack is: 30 20 10
+// 1. Push  2. Pop  3. Display  4. Exit
+// Enter your choice: 2
+// The popped item is 30
+// 1. Push  2. Pop  3. Display  4. Exit
+// Enter your choice: 3
+// The stack is: 20 10

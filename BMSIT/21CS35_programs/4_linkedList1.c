@@ -143,3 +143,22 @@ int main()
         }
     }
 }
+
+// Output:
+// 1:Create 2:Insert_front 3:Insert_rear 4:Delete_front 5:Delete_rear 6:Display 7:Exit
+// Enter the choice: 1
+// 1:Create 2:Insert_front 3:Insert_rear 4:Delete_front 5:Delete_rear 6:Display 7:Exit
+// Enter the choice: 6
+// 10 20
+// 1:Create 2:Insert_front 3:Insert_rear 4:Delete_front 5:Delete_rear 6:Display 7:Exit
+// Enter the choice: 2
+// Enter the item to be inserted: 30
+// 1:Create 2:Insert_front 3:Insert_rear 4:Delete_front 5:Delete_rear 6:Display 7:Exit
+// Enter the choice: 6
+// 30 10 20
+// 1:Create 2:Insert_front 3:Insert_rear 4:Delete_front 5:Delete_rear 6:Display 7:Exit
+// Enter the choice: 3
+// Enter the item to be inserted: 40
+// 1:Create 2:Insert_front 3:Insert_rear 4:Delete_front 5:Delete_rear 6:Display 7:Exit
+// Enter the choice: 6
+// 30 10 20 40

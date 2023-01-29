@@ -97,3 +97,30 @@ void display(int stackno)
         printf("%d ", stack[i]);
     printf("\n");
 }
+
+// Output:
+// Enter the number of stacks: 3
+// 1.push to. 2.pop from. 3.display. 4.exit
+// Enter your choice: 1
+// Enter the stack number: 1
+// Enter the item to be pushed: 1
+// 1.push to. 2.pop from. 3.display. 4.exit
+// Enter your choice: 1
+// Enter the stack number: 1
+// Enter the item to be pushed: 2
+// 1.push to. 2.pop from. 3.display. 4.exit
+// Enter your choice: 1
+// Enter the stack number: 2
+// Enter the item to be pushed: 3
+// 1.push to. 2.pop from. 3.display. 4.exit
+// Enter your choice: 3
+// Enter the stack number: 1
+// The contents of the stack are: 2 1
+// 1.push to. 2.pop from. 3.display. 4.exit
+// Enter your choice: 2
+// Enter the stack number: 1
+// The popped item is: 2
+// 1.push to. 2.pop from. 3.display. 4.exit
+// Enter your choice: 3
+// Enter the stack number: 1
+// The contents of the stack are: 1

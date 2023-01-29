@@ -46,3 +46,15 @@ int main()
     }
     return 0;
 }
+
+// Output:
+// Enter the number of rows: 2
+// Enter the number of columns: 3
+// Enter the element at position (0,0): 1
+// Enter the element at position (0,1): 2
+// Enter the element at position (0,2): 3
+// Enter the element at position (1,0): 4
+// Enter the element at position (1,1): 5
+// Enter the element at position (1,2): 6
+// 1       2       3
+// 4       5       6

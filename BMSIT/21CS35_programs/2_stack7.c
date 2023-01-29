@@ -63,3 +63,7 @@ char pop(int *top, char s[])
     *top = *top - 1;
     return item;
 }
+
+// Output:
+// Enter the string: hello
+// The reversed string is: olleh

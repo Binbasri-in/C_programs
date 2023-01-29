@@ -27,3 +27,7 @@ int factorial(int n)
     // recursive call
     return n * factorial(n - 1);
 }
+
+// Output:
+// Enter a number: 5
+// Factorial of 5 is 120

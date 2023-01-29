@@ -29,3 +29,9 @@ int ackerman(int m, int n)
     // recursive call
     return ackerman(m - 1, ackerman(m, n - 1));
 }
+
+// Output:
+// Enter two numbers: 1 2
+// Ackerman's function of 1 and 2 is 4
+// Enter two numbers: 3 3
+// Ackerman's function of 3 and 3 is 61
