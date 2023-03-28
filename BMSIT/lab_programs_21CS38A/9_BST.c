@@ -98,7 +98,7 @@ NODE delete_node(NODE root, int key)
         printf("Key not found\n");
         return root;
     }
-    if (cur>-llink == NULL)
+    if (cur->llink == NULL)
         child = cur->rlink;
     else if (cur->rlink == NULL)
         child = cur->llink;
