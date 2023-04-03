@@ -184,3 +184,21 @@ void display(NODE first)
     }
     printf("Number of nodes in the list = %d\n", count);
 }
+
+// Output
+// Enter the number of students: 1
+// Enter the USN: 1BM18CS001
+// Enter the name: John
+// Enter the branch: CSE
+// Enter the semester: 3
+// Enter the phone number: 1234567890
+// 1. Insert front 2. Insert rear 3. Delete front 4. Delete rear 5. Display 6. Exit
+// Enter your choice: 5
+// Contents of the list are:
+// USN: 1BM18CS001
+// Name: John
+// Branch: CSE
+// Semester: 3
+// Phone number: 1234567890
+// Number of nodes in the list = 1
+
