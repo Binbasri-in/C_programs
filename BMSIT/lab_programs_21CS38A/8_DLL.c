@@ -188,3 +188,18 @@ void display(NODE first)
         cur=cur->rlink;
     }
 }
+
+
+// Output
+// Enter number of nodes to be created: 1
+// Enter SSN: 1
+// Enter Name: ali
+// Enter Dept: cse
+// Enter Designation: student
+// Enter Salary: 1000
+// Enter Phone Number: 123
+// 1. Insert at front  2. Insert at rear  3. Delete at front  4. Delete at rear  5. Display  6. Exit
+// Enter your choice: 5
+// Contents of the list are:
+// SSN: 1    Name: ali   Dept: cse    Designation: student   Salary: 1000.000000    Phone Number: 123
+
