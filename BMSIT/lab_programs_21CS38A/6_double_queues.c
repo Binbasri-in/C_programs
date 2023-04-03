@@ -1,6 +1,6 @@
 // double ended queues
 #include <stdio.h>
-#define queue_size 5
+#define queue_size 50
 
 void insert_front(int item, int *f, int *r, int q[])
 {
