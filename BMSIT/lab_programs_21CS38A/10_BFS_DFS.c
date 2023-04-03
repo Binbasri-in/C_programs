@@ -4,7 +4,8 @@
 #include <stdlib.h>
 
 // global variables
-int visited[20], n, adj[20][20];
+int visited[20] = {0}; 
+int n, adj[20][20];
 
 // prototypes
 void bfs(int);
@@ -12,7 +13,7 @@ void dfs(int);
 
 int main()
 {
-    int ch, i, source, j, flag;
+    int ch, i, source, j;
 
     printf("Enter number of vertices: ");
     scanf("%d", &n);
@@ -22,39 +23,24 @@ int main()
         for (j = 0; j < n; j++)
             scanf("%d", &adj[i][j]);
 
-    for (i = 0; i < n; i++)
-        visited[i] = 0;
 
-    printf("1. Breadth First Search  2. Depth First Search  3. Exit\n");
-    printf("Enter your choice: ");
-    scanf("%d", &ch);
-    switch (ch)
-    {
-        case 1: printf("Enter starting vertex for BFS: ");
-                scanf("%d", &source);
-                bfs(source);
-                break;
-        case 2: printf("Enter starting vertex for DFS: ");
-                scanf("%d", &source);
-                dfs(source);
-                break;
-        case 3: exit(0);
-    }
+    printf("Enter starting vertex for BFS: ");
+    scanf("%d", &source);
+    bfs(source);
+             
     // nodes are reachable from source
-    flag = 0;
-
     for (i = 0; i < n; i++)
     {
         if (visited[i] == 0)
         {
-            printf("%d is not reachable", i);
+            printf("%d is not reachable\n", i);
             flag = 1;
         }
         else
-            printf("%d is reachable", i);
+            printf("%d is reachable\n", i);
     }
     if (flag == 0)
-        printf("All nodes are reachable");
+        printf("All nodes are reachable, so it is connected graph\n");
     return 0;
 }
 
@@ -78,23 +64,18 @@ void bfs(int source)
     }
 }
 
-void dfs(int source)
-{
-    int stack[20], top = -1, i, u;
 
-    stack[++top] = source;
-    visited[source] = 1;
-    while (top != -1)
-    {
-        u = stack[top--];
-        for (i = 0; i < n; i++)
-        {
-            if (adj[u][i] == 1 && visited[i] == 0)
-            {
-                stack[++top] = i;
-                visited[i] = 1;
-            }
-        }
-    }
-}
-
+// Output
+// Enter number of vertices: 4
+// Enter adjacency matrix:
+// 0 1 1 0
+// 1 0 0 1
+// 1 0 0 1
+// 0 0 0 0
+// 1. Breadth First Search  2. Depth First Search  3. Exit
+// Enter your choice: 1
+// Enter starting vertex for BFS: 0
+// 0 is reachable
+// 1 is reachable
+// 2 is reachable
+// 3 is not reachable
