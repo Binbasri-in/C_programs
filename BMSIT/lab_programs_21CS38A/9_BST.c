@@ -75,50 +75,6 @@ NODE search(NODE root, int key)
         return search(root->rlink, key);
 }
 
-NODE delete_node(NODE root, int key)
-{
-    NODE cur, prev, child, succ;
-    if (root == NULL)
-    {
-        printf("Tree is empty\n");
-        return NULL;
-    }
-    prev = NULL;
-    cur = root;
-    while (cur != NULL && cur->data != key)
-    {
-        prev = cur;
-        if (key < cur->data)
-            cur = cur->llink;
-        else
-            cur = cur->rlink;
-    }
-    if (cur == NULL)
-    {
-        printf("Key not found\n");
-        return root;
-    }
-    if (cur->llink == NULL)
-        child = cur->rlink;
-    else if (cur->rlink == NULL)
-        child = cur->llink;
-    else
-    {
-        succ = cur->rlink;
-        while (succ->llink != NULL)
-            succ = succ->llink;
-        succ->llink = cur->llink;
-        child = cur->rlink;
-    }
-    if (prev == NULL)
-        root = child;
-    else if (cur == prev->llink)
-        prev->llink = child;
-    else
-        prev->rlink = child;
-    free(cur);
-    return root;
-}
 
 int main()
 {
@@ -126,7 +82,7 @@ int main()
     int choice, item, key;
     for (;;)
     {
-        printf("1. Insert 2. Delete  3. Search  4. Inorder  5. Preorder  6. Postorder  7. Exit\n");
+        printf("1. Insert  2. Search  3. Inorder  4. Preorder  5. Postorder  6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         switch (choice)
@@ -137,11 +93,6 @@ int main()
             root = insert_node(root, item);
             break;
         case 2:
-            printf("Enter the item to be deleted: ");
-            scanf("%d", &key);
-            root = delete_node(root, key);
-            break;
-        case 3:
             printf("Enter the item to be searched: ");
             scanf("%d", &key);
             root = search(root, key);
@@ -150,15 +101,15 @@ int main()
             else
                 printf("Key not found\n");
             break;
-        case 4:
+        case 3:
             inorder(root);
             printf("\n");
             break;
-        case 5:
+        case 4:
             preorder(root);
             printf("\n");
             break;
-        case 6: 
+        case 5: 
             postorder(root);
             printf("\n");
             break;
@@ -168,3 +119,18 @@ int main()
     }
     return 0;
 }
+
+
+// Output
+// 1. Insert 2. Delete  3. Search  4. Inorder  5. Preorder  6. Postorder  7. Exit
+// Enter your choice: 1
+// Enter the item to be inserted: 50
+// 1. Insert 2. Delete  3. Search  4. Inorder  5. Preorder  6. Postorder  7. Exit
+// Enter your choice: 1
+// Enter the item to be inserted: 30
+// 1. Insert 2. Delete  3. Search  4. Inorder  5. Preorder  6. Postorder  7. Exit
+// Enter your choice: 4
+// 30 50
+// 1. Insert 2. Delete  3. Search  4. Inorder  5. Preorder  6. Postorder  7. Exit
+// Enter your choice: 5
+// 50 30
