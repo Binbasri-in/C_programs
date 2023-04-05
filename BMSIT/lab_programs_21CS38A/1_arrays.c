@@ -33,6 +33,7 @@ void main()
     for(;;)
     {
         printf("1.display  2.insert  3.delete  4.exit\n");
+        printf("Enter your choice: ");
         scanf("%d", &ch);
 
         switch(ch)
