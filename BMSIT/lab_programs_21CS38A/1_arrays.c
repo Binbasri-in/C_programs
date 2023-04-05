@@ -88,22 +88,6 @@ void delete_array(int pos)
     n = n - 1;
 }
 
-void update_array(int item, int pos)
-{
-    if (n == 0)
-    {
-        printf("No elements in the array, cannot update\n");
-        return;
-    }
-    if (pos > n || pos < 0)
-    {
-        printf("Invalid position \n");
-        return;
-    }
-    a[pos] = item;
-    printf("Updated Successfully \n");
-}
-
 int main()
 {
     int item, pos, choice;
