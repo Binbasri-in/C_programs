@@ -18,12 +18,7 @@ void create_array()
 {
     int i;
     a = (int *)malloc(arraysize * sizeof(int));
-    if (a == NULL)
-    {
-        printf("Array creation failed\n");
-        exit(0);
-    }
-    printf("Array created\n");
+    
     printf("Enter %d elements\n", n); // n is the current no of elements
     for (i = 0; i < n; i++)
     {
