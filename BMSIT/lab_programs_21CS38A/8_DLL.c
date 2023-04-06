@@ -9,6 +9,8 @@ e. Demonstrate how this DLL can be used as Double Ended Queue
 f. Exit.
 */
 
+// 8.DLL
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -39,7 +41,7 @@ int main()
     scanf("%d",&ch);
     for (int i = 0; i < ch; i++)
     {
-        first=insert_rear(first);
+        first=insert_front(first);
     }
 
     for(;;)
@@ -60,7 +62,6 @@ int main()
             case 5: display(first);
                     break;
             case 6: exit(0);
-            default: printf("Invalid choice\n");
         }
     }
     return 0;
@@ -72,115 +73,125 @@ NODE read_node()
     temp=(NODE)malloc(sizeof(struct node));
     printf("Enter SSN: ");
     scanf("%s",temp->ssn);
-    printf("Enter Name: ");
+    printf("Enter name: ");
     scanf("%s",temp->name);
-    printf("Enter Dept: ");
+    printf("Enter department: ");
     scanf("%s",temp->dept);
-    printf("Enter Designation: ");
+    printf("Enter designation: ");
     scanf("%s",temp->desg);
-    printf("Enter Salary: ");
-    scanf("%f",&temp->sal);
-    printf("Enter Phone Number: ");
+    printf("Enter phone number: ");
     scanf("%s",temp->phno);
-    temp->llink=NULL;
+    printf("Enter salary: ");
+    scanf("%f",&temp->sal);
     temp->rlink=NULL;
+    temp->llink=NULL;
     return temp;
 }
 
 void print_node(NODE temp)
 {
-    printf("SSN: %s\tName: %s\tDept: %s\tDesignation: %s\tSalary: %f\tPhone Number: %s\n",temp->ssn,temp->name,temp->dept,temp->desg,temp->sal,temp->phno);
+    printf("SSN: %s\n",temp->ssn);
+    printf("Name: %s\n",temp->name);
+    printf("Department: %s\n",temp->dept);
+    printf("Designation: %s\n",temp->desg);
+    printf("Phone number: %s\n",temp->phno);
+    printf("Salary: %f\n",temp->sal);
 }
 
 NODE insert_front(NODE first)
 {
     NODE temp;
-    temp=read_node();
-    if(first==NULL)
-        return temp;
+    temp=read_node(); // create a new node
+
+    if(first==NULL) // if list is empty
+    {
+        first=temp;
+        return first;
+    }
+
     temp->rlink=first;
     first->llink=temp;
-    return temp;
+    first=temp;
+
+    return first; // return the first node
 }
 
 NODE insert_rear(NODE first)
 {
-    NODE cur,temp;
-    temp=read_node();
-    if(first==NULL)
-        return temp;
+    NODE temp,cur;
+    temp=read_node(); // create a new node
+
+    if(first==NULL) // if list is empty
+    {
+        first=temp;
+        return first;
+    }
+
     cur=first;
     while(cur->rlink!=NULL)
+    {
         cur=cur->rlink;
+    }
     cur->rlink=temp;
     temp->llink=cur;
-    return first;
+
+    return first; // return the first node
 }
 
 NODE delete_front(NODE first)
 {
     NODE temp;
-    if(first==NULL)
+    if(first==NULL) // if list is empty
     {
         printf("List is empty\n");
-        return NULL;
+        return first;
     }
 
-    if(first->rlink==NULL)
-    {
-        printf("Deleted node is: ");
-        print_node(first);
-        free(first);
-        return NULL;
-    }
+    print_node(first);
     temp=first;
     first=first->rlink;
-    first->llink=NULL;
-    printf("Deleted node is: ");
-    print_node(temp);
     free(temp);
-    return first;
+    if(first!=NULL)
+        first->llink=NULL;
+
+    return first; // return the first node
 }
 
 NODE delete_rear(NODE first)
 {
-    NODE cur,prev;
-    if(first==NULL)
+    NODE cur, prev;
+    if(first==NULL) // if list is empty
     {
         printf("List is empty\n");
-        return NULL;
+        return first;
     }
 
-    if(first->rlink==NULL)
-    {
-        printf("Deleted node is: ");
-        print_node(first);
-        free(first);
-        return NULL;
-    }
-    prev=NULL;
     cur=first;
     while(cur->rlink!=NULL)
     {
         prev=cur;
         cur=cur->rlink;
     }
-    prev->rlink=NULL;
-    printf("Deleted node is: ");
     print_node(cur);
+    if(cur==first) // if there is only one node
+        first=NULL;
+    else
+        prev->rlink=NULL;
     free(cur);
-    return first;
+
+    return first; // return the first node
 }
 
 void display(NODE first)
 {
     NODE cur;
-    if(first==NULL)
+    if(first==NULL) // if list is empty
     {
         printf("List is empty\n");
         return;
     }
-    printf("Contents of the list are:\n");
+
+    printf("Contents of the list\n");
     cur=first;
     while(cur!=NULL)
     {
