@@ -1,8 +1,9 @@
+// 7.SLL
+
 #include <stdio.h>
 #include <stdlib.h>
 
-
-typedef struct node
+struct node
 {
     char usn[10];
     char name[20];
@@ -10,9 +11,9 @@ typedef struct node
     int sem;
     char phno[20];
     struct node *next;
-} node;
+};
 
-typedef node* NODE;
+typedef struct node* NODE;
 
 // prototypes
 NODE read_node();
@@ -34,13 +35,14 @@ int main()
     scanf("%d", &n);
     for (i = 0; i < n; i++)
     {
-        first = insert_front(first);
+        first = insert_rear(first);
     }
     for(;;)
     {
-        printf("1. Insert front\n2. Insert rear\n3. Delete front\n4. Delete rear\n5. Display\n6. Exit\n");
+        printf("1. Insert front  2. Insert rear  3. Delete front  4. Delete rear  5. Display  6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
+
         switch(choice)
         {
             case 1: first = insert_front(first);
@@ -56,18 +58,17 @@ int main()
             default: exit(0);
         }
     }
-
 }
 
-// function to read a node
+// read a node
 NODE read_node()
 {
     NODE temp;
-    temp = (NODE)malloc(sizeof(node));
+    temp = (NODE)malloc(sizeof(struct node));
     printf("Enter the USN: ");
     scanf("%s", temp->usn);
     printf("Enter the name: ");
-    scanf("%*c%[^\n]", temp->name);
+    scanf("%s", temp->name);
     printf("Enter the branch: ");
     scanf("%s", temp->branch);
     printf("Enter the semester: ");
@@ -78,7 +79,7 @@ NODE read_node()
     return temp;
 }
 
-// function to print a node
+// print a node
 void print_node(NODE temp)
 {
     printf("USN: %s\n", temp->usn);
@@ -88,68 +89,68 @@ void print_node(NODE temp)
     printf("Phone number: %s\n", temp->phno);
 }
 
-// function to insert a node at the front
+// insert a node at the front
 NODE insert_front(NODE first)
 {
     NODE temp;
-    temp = read_node();
-    temp->next = first;
-    first = temp;
-    return first;
+    temp = read_node(); // create the node
+
+    temp->next = first; // insert the node at the front
+    return temp;
 }
 
-// function to insert a node at the rear
+// insert a node at the rear
 NODE insert_rear(NODE first)
 {
     NODE temp, cur;
-    temp = read_node();
-    if (first == NULL)
-    {
-        first = temp;
-        return first;
-    }
-    cur = first;
+    temp = read_node(); // create the node
+
+    if (first == NULL) // if the list is empty return temp directly
+        return temp;
+
+    cur = first;  // else traverse to the end of the list and insert it
     while (cur->next != NULL)
-    {
         cur = cur->next;
-    }
     cur->next = temp;
-    return first;
+
+    return first; // return the first node
 }
 
-// function to delete a node from the front
+// delete a node from the front
 NODE delete_front(NODE first)
 {
     NODE temp;
-    if (first == NULL)
+    if (first == NULL) //if the list is empty
     {
         printf("List is empty\n");
-        return first;
+        return NULL;
     }
-    temp = first;
-    printf("Deleted node is:\n");
-    print_node(temp);
+    temp = first; // else delete the first node
     first = first->next;
+    printf("The deleted node is:\n");
+    print_node(temp);
     free(temp);
-    return first;
+
+    return first; // return the first node
 }
 
-// function to delete a node from the rear
+// delete a node from the rear
 NODE delete_rear(NODE first)
 {
     NODE cur, prev;
-    if (first == NULL)
+    if (first == NULL) // if the list is empty
     {
         printf("List is empty\n");
-        return first;
+        return NULL;
     }
-    if (first->next == NULL)
+    if (first->next == NULL) // if the list has only one node
     {
-        printf("Deleted node is:\n");
+        printf("The deleted node is:\n");
         print_node(first);
         free(first);
         return NULL;
     }
+    // else traverse to the end of the list and delete the last node
     prev = NULL;
     cur = first;
     while (cur->next != NULL)
@@ -157,48 +158,28 @@ NODE delete_rear(NODE first)
         prev = cur;
         cur = cur->next;
     }
-    printf("Deleted node is:\n");
+    printf("The deleted node is:\n");
     print_node(cur);
-    prev->next = NULL;
     free(cur);
-    return first;
+    prev->next = NULL;
+
+    return first; // return the first node
 }
 
-// function to display the list and count the number of nodes
+// display the list
 void display(NODE first)
 {
     NODE cur;
-    int count = 0;
-    if (first == NULL)
+    if (first == NULL) // if the list is empty
     {
         printf("List is empty\n");
         return;
     }
-    printf("Contents of the list are:\n");
+    printf("The contents of the list are:\n");
     cur = first;
     while (cur != NULL)
     {
         print_node(cur);
         cur = cur->next;
-        count++;
     }
-    printf("Number of nodes in the list = %d\n", count);
 }
-
-// Output
-// Enter the number of students: 1
-// Enter the USN: 1BM18CS001
-// Enter the name: John
-// Enter the branch: CSE
-// Enter the semester: 3
-// Enter the phone number: 1234567890
-// 1. Insert front 2. Insert rear 3. Delete front 4. Delete rear 5. Display 6. Exit
-// Enter your choice: 5
-// Contents of the list are:
-// USN: 1BM18CS001
-// Name: John
-// Branch: CSE
-// Semester: 3
-// Phone number: 1234567890
-// Number of nodes in the list = 1
-
