@@ -66,4 +66,6 @@ void infix_to_postfix(char infix[], char postfix[])
 
     while (s[top] != '#') // pop the remaining elements if any
         postfix[n++] = s[top--];
+    
+    postfix[n] = '\0';
 }
