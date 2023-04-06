@@ -1,15 +1,16 @@
 // Breadth-first search (BFS) and depth-first search (DFS) algorithms on graph
 
+// 10.BFS
+
 #include <stdio.h>
 #include <stdlib.h>
 
-// global variables
-int visited[20] = {0}; 
+// global
+int visited[20] = {0};
 int n, adj[20][20];
 
 // prototypes
 void bfs(int);
-void dfs(int);
 
 int main()
 {
@@ -23,24 +24,19 @@ int main()
         for (j = 0; j < n; j++)
             scanf("%d", &adj[i][j]);
 
-
     printf("Enter starting vertex for BFS: ");
     scanf("%d", &source);
     bfs(source);
-             
+
     // nodes are reachable from source
     for (i = 0; i < n; i++)
     {
         if (visited[i] == 0)
-        {
             printf("%d is not reachable\n", i);
-            flag = 1;
-        }
         else
             printf("%d is reachable\n", i);
     }
-    if (flag == 0)
-        printf("All nodes are reachable, so it is connected graph\n");
+
     return 0;
 }
 
