@@ -1,94 +1,94 @@
+// 5. circular queues
+
 #include <stdio.h>
-#define queue_size 5
+#include <stdlib.h>
+#define MAX 20
 
-void insert_rear(int item, int *r, int q[])
+// global
+int q[MAX];
+int r = -1, f = 0, count = 0;
+
+//prototypes
+void insert_rear(int item);
+void delete_front();
+void under_or_over_flow();
+void display();
+
+void main()
 {
-    // check overflow condition
-    if(*r == queue_size - 1)
+    int ch, item;
+
+    for(;;)
     {
-        printf("Queue Overflow\n");
+        printf("1.insert rear  2.delete front  3.check status  4.display  5.exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &ch);
+
+        switch(ch)
+        {
+            case 1: printf("Enter item to insert: ");
+                    scanf("%d", &item);
+                    insert_rear(item);
+                    break;
+            case 2: delete_front();
+                    break;
+            case 3: under_or_over_flow();
+                    break;
+            case 4: display();
+                    break;
+            default: exit(0);
+        }
+    }
+}
+
+void insert_rear(int item)
+{
+    if (count == MAX-1)
+    {
+        printf("Queue is overflow\n");
         return;
     }
 
-    // insert the element
-    *r = *r + 1;
-    q[*r] = item;
+    r = (r+1) % MAX;
+    q[r] = item;
+    count = count + 1;
 }
 
-void delete_front(int *f, int *r, int q[])
-{
-    int item;
 
-    // check underflow condition
-    if(*f > *r)
+void delete_front()
+{
+    if (count == 0)
     {
-        printf("Queue Underflow\n");
+        printf("Queue is underflow\n");
         return;
     }
 
-    // delete the element
-    printf("Item deleted is: %d\n",q[*f]);
-    *f = *f + 1;
-
-    // if reached end of queue, reset the queue
-    if(*f > *r)
-    {
-        *f = 0;
-        *r = -1;
-    }
+    printf("Deleted: %d\n", q[f]);
+    f = (f + 1) % MAX;
+    count = count - 1;
 }
 
-void display(int f, int r, int q[])
+void under_or_over_flow()
+{
+    if (count == MAX-1)
+        printf("Queue is overflow\n");
+    else if (count == 0)
+        printf("Queue is underflow\n");
+    else
+        printf("Not underflow nor overflow\n");
+}
+
+void display()
 {
     int i;
-
-    // check underflow condition
-    if(f > r)
+    if (count == 0)
     {
         printf("Queue is empty\n");
         return;
     }
 
-    // display the queue
-    printf("Contents of the queue are:\n");
-    for(i = f; i <= r; i++)
-        printf("%d\t",q[i]);
+    printf("The Queue is: ");
+    for (i = 0; i < count; i++)
+        printf("%d\t", q[(f+i)%MAX]);
     printf("\n");
-}
-
-int main()
-{
-    // create queue, initialize front and rear
-    int queue[queue_size];
-    int front = 0, rear = -1;
-    int choice, item;
-
-    while(1)
-    {
-        printf("1. Insert\n");
-        printf("2. Delete\n");
-        printf("3. Display\n");
-        printf("4. Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d",&choice);
-
-        switch(choice)
-        {
-            case 1:
-                printf("Enter the item to be inserted: ");
-                scanf("%d",&item);
-                insert_rear(item, &rear, queue);
-                break;
-            case 2:
-                delete_front(&front, &rear, queue);
-                break;
-            case 3:
-                display(front, rear, queue);
-                break;
-            case 4:
-                return 0;
-            default:
-                printf("Invalid choice\n");
-        }
-    }
 }
