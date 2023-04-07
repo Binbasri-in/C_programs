@@ -78,7 +78,7 @@ NODE search(NODE root, int key)
 
 int main()
 {
-    NODE root = NULL;
+    NODE root = NULL, check;
     int choice, item, key;
     for (;;)
     {
@@ -95,8 +95,8 @@ int main()
         case 2:
             printf("Enter the item to be searched: ");
             scanf("%d", &key);
-            root = search(root, key);
-            if (root != NULL)
+            check = search(root, key);
+            if (check != NULL)
                 printf("Key found\n");
             else
                 printf("Key not found\n");
